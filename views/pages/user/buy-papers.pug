@@ -1,0 +1,23 @@
+extends ../../layouts/default.pug
+block main
+  .buy-extra
+    .container
+      .buy-extra-main
+        h2.buy-extra-title Mua th&ecirc;m gi&#x1EA5;y in
+        form.buy-extra-form.form-group
+          .mb-3
+            label.form-label.input-id-label(for='printerId') ID m&aacute;y in
+            input#printerId.form-control.input-id.buy-input(type='text' placeholder='Nhập ID máy in' name='printer-id')
+          .mb-3
+            label.form-label.input-id-label(for='paperType') Ch&#x1ECD;n lo&#x1EA1;i gi&#x1EA5;y
+            select#paperType.form-select.buy-input(name='paper-type')
+              option.select-input(selected='' value='none') Lo&#x1EA1;i gi&#x1EA5;y
+              option.select-input(value='A2') A2
+              option.select-input(value='A3') A3
+              option.select-input(value='A4') A4
+          .mb-3
+            label.form-label.input-id-label(for='quantity') S&#x1ED1; t&#x1EDD;
+            input#quantity.form-control.buy-input(type='number' placeholder='Số tờ phải là số nguyên' name='paper-quantity')
+          .mb-4.price.d-none#price
+          .pay-button.text-center
+            button.btn.btn-primary(type='submit') Thanh to&aacute;n

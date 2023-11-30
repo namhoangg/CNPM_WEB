@@ -1,0 +1,13 @@
+const express = require("express");
+const router = express.Router();
+const controller = require("../controllers/user.controller");
+const loginValidate = require("../validate/login.validate");
+const authMiddleware = require("../middlewares/auth.middleware");
+router.get("/login", controller.login);
+router.post("/login", loginValidate.login, controller.postLogin);
+router.get("/profile",authMiddleware.auth, controller.profile);
+router.get("/logout", controller.logout);
+router.get("/print",authMiddleware.auth, controller.print);
+router.get("/buy-paper",authMiddleware.auth, controller.buyPapers);
+router.get("/history",authMiddleware.auth, controller.history);
+module.exports =router;

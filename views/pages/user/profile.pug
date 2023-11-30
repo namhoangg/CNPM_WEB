@@ -1,0 +1,29 @@
+extends ../../layouts/default.pug
+include ../../mixins/alert.pug
+block main 
+  +alert-success(3000)
+  +alert-error(3000)
+  .after-login-section
+    .container
+      .main
+        .main-item#user-print
+          .main-item-icon
+            i.fa-solid.fa-print
+          .main-item-title
+            span In
+          .main-item-desc
+            span In tập tin đã có sẵn
+        .main-item#user-buy-paper
+          .main-item-icon
+            i.fa-regular.fa-note-sticky
+          .main-item-title
+            span Mua giấy
+          .main-item-desc
+            span Mua thêm giấy in
+        .main-item#user-history
+          .main-item-icon
+            i.fa-solid.fa-clock-rotate-left
+          .main-item-title
+            span Lịch sử in
+          .main-item-desc
+            span Kiểm tra lịch sử in

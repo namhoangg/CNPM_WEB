@@ -1,0 +1,23 @@
+extends ../../layouts/default.pug
+block main 
+  .section-print
+    .container
+      .section-print-wrapper
+        .section-print-main
+          .upload
+            .upload-title
+              span T&#x1EA3;i file
+            .upload-file
+              input#file.upload-file-input.d-none(type='file' name='file')
+              .upload-file-content
+                .upload-file-content-icon-1
+                  i.fa-solid.fa-cloud-arrow-up
+                .upload-file-content-text
+                  span Vui l&ograve;ng ch&#x1ECD;n file mu&#x1ED1;n in
+                .upload-file-content-icon-2
+                  i.fa-solid.fa-square-plus
+        .upload-button
+          .preview-button
+            button.btn.btn-primary Xem tr&#x1B0;&#x1EDB;c
+          .print-button
+            button.btn.btn-primary In

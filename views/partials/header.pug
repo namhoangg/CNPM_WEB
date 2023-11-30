@@ -1,0 +1,35 @@
+header
+  .container
+    .header
+      .row
+        .col-2
+          .header-logo
+            a
+              i.fa-solid.fa-print
+              span SPSS
+        .col-7
+          .header-menu
+            ul.header-list
+              li.header-item
+                if userToken!=''
+                  a.header-link(href='/user/profile') Trang chủ
+                else
+                  a.header-link(href='/') Trang chủ
+              li.header-item
+                a.header-link(href='/') FAQ
+              li.header-item
+                a.header-link(href='/') Hướng dẫn
+              li.header-item
+                a.header-link(href='/') Liên hệ
+        .col-3
+            if userToken!=''
+              .header-afterLogin
+                .header-hello
+                  span Xin chào 
+                  strong nam.hoangg
+                .header-logout
+                  a.header-link(href='/user/logout') Đăng xuất
+            else
+              .header-login
+                a.header-link(href='/user/login') Đăng nhập
+           

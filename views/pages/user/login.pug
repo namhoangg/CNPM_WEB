@@ -1,0 +1,24 @@
+extends ../../layouts/login.pug
+include ../../mixins/alert.pug
+block main 
+  +alert-success(3000)
+  +alert-error(3000)
+  .login-section
+    .container
+      .row
+        .col-4
+        .col-4
+          form.login-box(method='post')
+            h1.login-title Đăng nhập
+            .login-subtitle
+              span *Dùng tài khoản bk-elearning
+            .login-input
+              if values
+                input(type='text' placeholder='Tên tài khoản' name='username' value=values.username required)
+              else
+                input(type='text' placeholder='Tên tài khoản' name='username' required)
+              input(type='password' placeholder='Mật khẩu' name='password' required)
+            .login-forgot
+              span Quên mật khẩu?
+            button.login-button(type='submit') Đăng nhập
+        .col-4
