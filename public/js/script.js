@@ -24,7 +24,7 @@ if (userBuyPaper) {
   });
 }
 const userHistory = document.querySelector("#user-history");
-if(userHistory){
+if (userHistory) {
   userHistory.addEventListener("click", () => {
     window.location.href = "/user/history";
   });
@@ -134,7 +134,6 @@ if (previewButton && fileInput) {
     }
   });
 }
-
 
 const paperType = document.querySelector("#paperType");
 const quantity = document.querySelector("#quantity");
